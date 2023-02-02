@@ -1,5 +1,5 @@
 
-\documentclass[a4,12pt]{article}
+\documentclass[a4paper,12pt]{article}
 
 % Choose bibliography style for formatting list of publications
 %\usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=ydnt,dashed=false]{biblatex}
@@ -7,7 +7,7 @@
 
 % Choose theme, e.g. black, RedViolet, ForestGreen, MidnightBlue
 
-\def\theme{Dandelion}
+\def\theme{MidnightBlue}
 
 % More predefined colors can be found in 
 % https://en.wikibooks.org/wiki/LaTeX/Colors
@@ -19,9 +19,9 @@
 \boldname{Philip}{Roshan Mathew}{N.}
 
 \begin{document}
-\pagecolor{Black}
-\color{white}
 % Heading
+\definecolor{Background}{RGB}{252, 248, 241}
+\pagecolor{Background}
 \headinginline{Roshan Mathew Philip}{
     %Website: \website{example.com} \\ 
     Email: \email{roshanm.philip@niser.ac.in} \\
@@ -37,20 +37,21 @@
 % }{photo.jpg}
 
 % Page One
+\import{sections/}{summary.tex}
 \import{sections/}{education.tex}
-\import{sections/}{research_interests.tex}
-\vspace{10}
+\import{sections/}{researchinterests.tex}
+%\vspace{10}
 %\import{sections/}{experience.tex}
 %\import{sections/}{publications.tex}
 
-% Page Two
 %\import{sections/}{teaching.tex}
 \sidebyside
     {\import{sections/}{skills.tex}}
     {\import{sections/}{languages.tex}}
 %\import{sections/}{projects.tex}
-\import{sections/}{awards.tex}
+% Page Two
 \pagebreak
+\import{sections/}{awards.tex}
 \import{sections/}{extracurricular.tex}
 
 \end{document}
