@@ -10,7 +10,7 @@
 \usepackage{enumitem}                       % List customization
 \usepackage{lastpage}                       % Page numbering
 \usepackage{fancyhdr}                       % Footers
-\usepackage[russian,english]{babel}         % Language styles
+\usepackage[english]{babel}         % Language styles
 \usepackage{graphicx}                       % Importing graphics
 \usepackage[export]{adjustbox}              % Aligning margins
 
@@ -138,12 +138,12 @@
   \def\firstinit{#3}}
 \boldname{}{}{}
 
-\renewcommand{\mkbibnamegiven}[1]{%
+\newcommand{\mkbibnamegiven}[1]{%
   \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
   {\mkbibbold{#1}}{#1}%
 }
 
-\renewcommand{\mkbibnamefamily}[1]{%
+\newcommand{\mkbibnamefamily}[1]{%
   \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
   {\mkbibbold{#1}}{#1}%
 }
