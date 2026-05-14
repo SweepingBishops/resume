@@ -23,7 +23,7 @@
 \definecolor{Background}{RGB}{252, 248, 241}
 \pagecolor{Background}
 \headinginline{Roshan Mathew Philip}{
-    Website: \website{SweepingBishops.github.io} \\ 
+    %Website: \website{SweepingBishops.github.io} {\footnotesize (work in progress)}\\
     Email: \email{roshanm.philip@niser.ac.in} \\
     %LinkedIn: \linkedin{name-surname} \\
     GitHub:\github{SweepingBishops}
@@ -36,22 +36,23 @@
 %     GitHub: \github{example}
 % }{photo.jpg}
 
-% Page One
 % \import{sections/}{summary.tex}
 \import{sections/}{researchinterests.tex}
 \import{sections/}{experience.tex}
-\import{sections/}{projects.tex}
-%\pagebreak
+\pagebreak
 \begin{multicols}{2}
+\import{sections/}{projects.tex}
+\columnbreak
 \import{sections/}{skills.tex}
 \end{multicols}
 %\import{sections/}{publications.tex}
 
-%\import{sections/}{teaching.tex}
-\import{sections/}{education.tex}
-%\import{sections/}{languages.tex}
-% Page Two
+\begin{multicols}{2}
 \import{sections/}{extracurricular.tex}
+\columnbreak
 \import{sections/}{awards.tex}
+\end{multicols}
+\import{sections/}{talks.tex}
+\import{sections/}{education.tex}
 
 \end{document}
